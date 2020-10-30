@@ -4,23 +4,25 @@
 
 #define MAX 1000
 
-/*. Definirati strukturu osoba (ime, prezime, godina roğenja) i napisati program koji:
-a) dinamièki dodaje novi element na poèetak liste,
+/*. Definirati strukturu osoba (ime, prezime, godina roÃ°enja) i napisati program koji:
+a) dinamiÃ¨ki dodaje novi element na poÃ¨etak liste,
 b) ispisuje listu,
-c) dinamièki dodaje novi element na kraj liste,
+c) dinamiÃ¨ki dodaje novi element na kraj liste,
 d) pronalazi element u listi (po prezimenu),
-e) briše odreğeni element iz liste,
+e) briÅ¡e odreÃ°eni element iz liste,
 U zadatku se ne smiju koristiti globalne varijable.*/
 
 struct _osoba;
 typedef struct _osoba *Pozicija;
+/* Definicija strukture osoba koja se sastoji od imena,prezimena,godine roÄ‘enja te pokazivaÄa na sljedeÄ‡i element vezane liste.
+Duljina stringa ime i prezime moze biti maksimalno 1000.*/
 typedef struct _osoba {
 	char ime[MAX];
 	char prezime[MAX];
 	int godinaRodenja;
 	Pozicija *next;
 }Osoba;
-
+//Deklaracije funkcija koje Ä‡emo koristiti.
 Pozicija StvoriOsobu(char *ime, char *prezime, int *godinaRodenja);
 int UnosNaPocetak(Osoba *element, Pozicija P);
 int IspisListe(Pozicija P);
