@@ -9,7 +9,10 @@ typedef _polinom{
   int exp;
   Pozicija *next;
 }Polinom;
+/* Funkcijom CitajIzDatoteke ćemo čitati zapisane koeficijente i eksponente polinoma iz zadane datoteke i unositi ih u listu*/
+/*Funkcija kao argument prima pokazivač na datoteku i pokazivač na praznu vezanu listu*/
 int CitajIzDatoteke();
+/*Funkcija ZbrojiPolinome kao argumente prima 
 int ZbrojiPolinome();
 int main(void)
 {
