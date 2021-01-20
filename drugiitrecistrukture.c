@@ -28,8 +28,8 @@ int UnosNaPocetak(Osoba *element, Pozicija P);
 int IspisListe(Pozicija P);
 int UnosNaKraj(Osoba *element, Pozicija P);
 int TraziEelement(char *element, Pozicija P);
-int DodajIzaOdredenogElementa(char *element, Pozicija P);
-int DodajIspredOdredenogElementa(char *element,Pozicija P);
+int BrisiElement(Osoba *element, Pozicija P);
+
 
 int main(void)
 {
@@ -157,53 +157,6 @@ int BrisiElement(Osoba *element, Pozicija P)
 	}
 	return 0;
 }
-int DodajIzaOdredenogElementa(char *element,Pozicija P)
-{	 
-	char ime[MAX] = { 0 };
-	char prezime[MAX] = { 0 };
-	int godinaRodenja = 0;
-	Osoba *element=NULL;
-	Pozicija *q;
-	Pozicija *z;
-	
-	printf("Unesite ime: \n");
-	scanf("%s", ime);
-	printf("Unesite prezime: \n");
-	scanf("%s", prezime);
-	printf("Unesite godinu rodenja: \n");
-	scanf("%d", &godinaRodenja);
-	
-	q=StvoriOsobu(ime,prezime.godinaRodenja);
-	
-	element= TraziElement(prezime, Head);
-	
-	z=q;
-	q->next=element->next;
-	element->next=z;
-		
-}
-int DodajIspredOdredenogElementa(char *element, Pozicija P)
-{
-	char ime[MAX] = { 0 };
-	char prezime[MAX] = { 0 };
-	int godinaRodenja = 0;
-	Osoba *element=NULL;
-	Pozicija *q;
-	Pozicija *z;
-	
-	printf("Unesite ime: \n");
-	scanf("%s", ime);
-	printf("Unesite prezime: \n");
-	scanf("%s", prezime);
-	printf("Unesite godinu rodenja: \n");
-	scanf("%d", &godinaRodenja);
-	
-	q=StvoriOsobu(ime,prezime.godinaRodenja);	
-	
-	element= TraziElement(prezime, Head);
-	
-	
-	element=q;
-	q->next=element;
-}
+
+
 
